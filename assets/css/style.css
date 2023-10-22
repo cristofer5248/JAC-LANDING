@@ -190,11 +190,11 @@ h6 {
 --------------------------------------------------------------*/
 .buy-tickets {
   color: #fff;
-  background: #f82249;
+  background: #4d77fb;
   padding: 7px 22px;
   margin: 0 0 0 15px;
   border-radius: 50px;
-  border: 2px solid #f82249;
+  border: 2px solid #4d77fb;
   transition: all ease-in-out 0.3s;
   font-weight: 500;
   line-height: 1;
@@ -628,7 +628,7 @@ h6 {
   margin: 10px;
   color: #fff;
   animation-delay: 0.8s;
-  border: 2px solid #f82249;
+  border: 2px solid #4d77fb;
 }
 
 #hero .about-btn:hover {
