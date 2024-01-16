@@ -190,11 +190,11 @@ h6 {
 --------------------------------------------------------------*/
 .buy-tickets {
   color: #fff;
-  background: #4d77fb;
+  background: #c70f86;
   padding: 7px 22px;
   margin: 0 0 0 15px;
   border-radius: 50px;
-  border: 2px solid #4d77fb;
+  border: 2px solid white;
   transition: all ease-in-out 0.3s;
   font-weight: 500;
   line-height: 1;
@@ -478,7 +478,8 @@ h6 {
 #hero {
   width: 100%;
   height: 100vh;
-  background: url(../img/hero-bg.jpg) top center;
+  /*background: url(../img/hero-bg.jpg) top center;*/
+  background-color: #77e1c1;
   background-size: cover;
   overflow: hidden;
   position: relative;
@@ -1309,13 +1310,13 @@ h6 {
   border-radius: 50px;
   padding: 10px 40px;
   transition: all 0.2s;
-  background-color: #4d77fb;
+  background-color: #c70f86;
   border: 0;
   color: #fff;
 }
 
 #buy-tickets .card .btn:hover {
-  background-color: #4d77fb;
+  background-color: #c70f86;
 }
 
 #buy-tickets #buy-ticket-modal input,
@@ -1328,13 +1329,13 @@ h6 {
   border-radius: 50px;
   padding: 10px 40px;
   transition: all 0.2s;
-  background-color: #4d77fb;
+  background-color: #c70f86;
   border: 0;
   color: #fff;
 }
 
 #buy-tickets #buy-ticket-modal .btn:hover {
-  background-color: #4d77fb;
+  background-color: #c70f86;
 }
 
 /*--------------------------------------------------------------
