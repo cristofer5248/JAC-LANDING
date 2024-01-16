@@ -201,6 +201,23 @@ h6 {
   font-size: 13px;
   white-space: nowrap;
 }
+.buy-tickets2 {
+  color: #fff;
+  background: #c70f86;
+  padding: 7px 22px;
+  margin: 0 0 0 15px;
+  border-radius: 50px;
+  border: 2px solid white;
+  transition: all ease-in-out 0.3s;
+  font-weight: 500;
+  line-height: 1;
+  font-size: 13px;
+  white-space: nowrap;
+}
+
+.buy-tickets2:hover {
+  color: #77e1c1;
+}
 
 .buy-tickets:hover {
   background: none;
