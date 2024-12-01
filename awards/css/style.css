@@ -144,7 +144,8 @@ h3 {
 .logo {
   padding: 0 5px;
   color: #d1d1d1;
-  font-size:35px;
+  /* cambiar esto tenia 35 */
+  font-size:15px;
   font-family: 'Comfortaa', Helvetica, sans-serif;
   cursor: default;
 }

@@ -209,9 +209,9 @@ var app = new Vue({
                 artist: 'Skylar Spence',
                 desc: '',
                 cost: 25,
-                catg: 'Catg A',
+                catg: 'Catg X',
                 img: 'https://i.scdn.co/image/fea11053422e15bacd0affe4527d2afc4b9b2d06',
-                date: 'September 18, 2015'
+                date: 'September 18, 2001'
             },
             {
                 id: 14,
@@ -323,7 +323,7 @@ var app = new Vue({
             for(var i = 1; i < this.products.length; i++) {arr.push(this.products[i])}
             arr.sort(function(a, b){ return (new Date(b.date)).getTime() - (new Date(a.date)).getTime() });
             
-            for(var i = 0; i < 14 && i < arr.length; i++) { this.newItems.push(arr[i]) }
+            for(var i = 0; i < 13 && i < arr.length; i++) { this.newItems.push(arr[i]) }
         },
         updateNewItemPos: function(num) {
             this.newItemPos += num;
