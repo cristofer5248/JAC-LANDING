@@ -4,7 +4,8 @@
   <meta charset="UTF-8">
   <title>Store Page Thing</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
-<link rel="stylesheet" href="./style.css">
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/countdown.css">
 
 </head>
 <body>
@@ -56,8 +57,8 @@
                     <h2 class="left">Una noche para recordar</h2>                    
                 </div>
                 <div class="rela-block new-item-container">
-                    <div :class="['vert-center', 'move-arrow', 'left-arrow', newItemPos<=0?'disabled':'']" @click="updateNewItemPos(-1)"><</div>
-                    <div :class="['vert-center', 'move-arrow', 'right-arrow', newItemPos>=(newItems.length-1)?'disabled':'']" @click="updateNewItemPos(1)">></div>
+                    <div :class="['vert-center', 'move-arrow', 'left-arrow', newItemPos<=0?'disabled':'']" @click="updateNewItemPos(-1)"></div>
+                    <div :class="['vert-center', 'move-arrow', 'right-arrow', newItemPos>=(newItems.length-1)?'disabled':'']" @click="updateNewItemPos(1)"></div>
                     <div class="inner-moving-container" :style="{'left': ((newItemPos * -320)+1)+'px'}">
                         <div v-for="(ni,index) in newItems" class="rela-inline new-item" :style="{'background': 'url(\''+ni.img+'\') center no-repeat', 'animation-delay': (index*0.1)+'s'}">
                             <!-- <div class="new-item-info">
@@ -69,14 +70,50 @@
                 </div>
             </div>
         </div>
+        <div class="rela-block page-section top-section">
+            <div class="gutter-container">
+                <main class="cuerpito">
+                    <div class="count-down-container">
+                      <div class="count-down-box">
+                        <div class="count-down">
+                          <h1 id="days">00</h1>
+                          <p>Days</p>
+                        </div>
+                      </div>
+                      <div class="count-down-box">
+                        <div class="count-down">
+                          <h1 id="hours">00</h1>
+                          <p>Hours</p>
+                        </div>
+                      </div>
+                      <div class="count-down-box">
+                        <div class="count-down">
+                          <h1 id="minutes">00</h1>
+                          <p>Minutes</p>
+                        </div>
+                      </div>
+                      <div class="count-down-box">
+                        <div class="count-down">
+                          <h1 id="seconds">00</h1>
+                          <p>Seconds</p>
+                        </div>
+                      </div>
+                    </div>
+                    <p class="hint-message">The day is coming. &#x1F609;</p>
+                  </main>
+        </div>
         <div class="rela-block page-section grey product-section">
             <div class="rela-block gutter-container">
                 <div class="rela-block section-nav">
-                    <h2 class="left">Categorias a premiar<span v-show="currentCatg !== 'All'">/{{currentCatg}}</span></h2>
+                    <h2 class="left">CATEGORIAS A PREMIAR<span v-show="currentCatg !== 'All'">
+                        <!-- /{{currentCatg}} -->
+
+                    </span></h2>
+                    <!---
                     <div class="right category-select">
                         <div v-for="c in catg" :class="['rela-inline', 'category', currentCatg===c?'active':'']"
                              @click="currentCatg = c; updateFilteredProducts()" >{{c}}</div>
-                    </div>
+                    </div>-->
                 </div>
                 <div class="rela-block product-item-container">
                     <product-comp v-for="(item,index) in displayedProducts" :info="item"></product-comp>
@@ -91,16 +128,16 @@
                 </div>
             </div>
         </div>
-        <div class="rela-block page-section new-section">
+        <!-- <div class="rela-block page-section new-section">
             <div class="rela-block gutter-container">
                 <div class="rela-block section-nav">
-                    <h2 class="left">Something Cool Here</h2>
+                    <h2 class="left">JAC 2024 @chrisgeek</h2>
                 </div>
             </div>
-        </div>
+        </div> -->
         <div class="rela-block footer">
             <div class="rela-block gutter-container inner-footer-container">
-                <div class="logo">tunes.</div>
+                <div class="logo">JAC 2024 @chrisgeek.</div>
             </div>                
         </div>
     </div>
@@ -146,8 +183,11 @@
         </div>
     </div>
 </div>
+    <script src="js/contador.js"></script>
 <!-- partial -->
-  <script src='https://cdnjs.cloudflare.com/ajax/libs/vue/2.1.10/vue.min.js'></script><script  src="./script.js"></script>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/vue/2.1.10/vue.min.js'></script>
+  <script src="js/myscript.js"></script>
+  
 
 </body>
 </html>
