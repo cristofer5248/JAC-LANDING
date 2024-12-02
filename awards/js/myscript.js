@@ -49,6 +49,16 @@ Vue.component('productComp', {
 var app = new Vue({
     el: '#app',
     data: {
+        days: 0,
+        hours: 0,
+        minutes: 0,
+        seconds: 0,
+        birthDay: `15 Dec ${new Date().getFullYear()}`,
+
+        stars: [],
+        totalStars: 500,
+        sparkle: 20,
+
         menuOpen: false,
         cartOpen: false,
         searchOpen: false,
@@ -311,6 +321,41 @@ var app = new Vue({
         currentCatg: 'Catg C',
     },
     methods: {
+        countdown() {
+            const birthDayDate = new Date(this.birthDay);
+            const currentDate = new Date();
+            const totalSeconds = (birthDayDate - currentDate) / 1000;
+      
+            this.days = Math.floor(totalSeconds / 3600 / 24);
+            this.hours = Math.floor(totalSeconds / 3600) % 24;
+            this.minutes = Math.floor(totalSeconds / 60) % 60;
+            this.seconds = Math.floor(totalSeconds) % 60;
+
+            
+        },
+        createStars() {
+            for (let i = 0; i < this.totalStars; i++) {
+              let sizeClass = "small";
+              if (i % 2 === 0) {
+                sizeClass = "small";
+              } else if (i % 3 === 0) {
+                sizeClass = "medium";
+              } else {
+                sizeClass = "large";
+              }
+      
+              this.stars.push({
+                top: Math.random() * 100 + "%",
+                left: Math.random() * 100 + "%",
+                animationDelay: Math.random() * this.sparkle + "s",
+                size: sizeClass
+              });
+            }
+        },
+
+        formatTime(time) {
+            return time < 10 ? `0${time}` : time;
+          },
         init: function() {
             app.updateNewItems();
             app.updateFilteredProducts();
@@ -371,7 +416,13 @@ var app = new Vue({
             // app.updateViewedProduct(); 
             // this.productViewOpen = true;
         },
-    }
+    },
+    mounted() {
+        this.countdown();
+        this.createStars();
+        setInterval(this.countdown, 1000);
+        
+      }
 });
 
 app.init();

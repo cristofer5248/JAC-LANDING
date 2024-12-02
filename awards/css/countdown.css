@@ -33,19 +33,19 @@
 }
 
 .count-down-box:nth-child(1) {
-  background-color: #3c79e0;
+  background-color: #b99c36;
 }
 
 .count-down-box:nth-child(2) {
-  background-color: #4285f6;
+  background-color: #deba3d;
 }
 
 .count-down-box:nth-child(3) {
-  background-color: #5390f7;
+  background-color: #c3a027;
 }
 
 .count-down-box:nth-child(4) {
-  background-color: #629af8;
+  background-color: #c5aa4d;
 }
 
 .count-down-box h1 {

@@ -6,6 +6,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
 <link rel="stylesheet" href="css/style.css">
 <link rel="stylesheet" href="css/countdown.css">
+<link rel="stylesheet" href="css/sparkle.css">
 <link href="../assets/img/logito.png" rel="icon">
 
 </head>
@@ -19,6 +20,19 @@
     <div class="menu">
         <p class="rela-block">menu</p>
     </div>
+    <div id="starshine">
+        <div
+          v-for="(star, index) in stars"
+          :key="index"
+          class="shine"
+          :class="star.size"
+          :style="{ 
+            top: star.top, 
+            left: star.left, 
+            animationDelay: star.animationDelay 
+          }"
+        ></div>
+      </div>
     <div :class="['rela-block', 'page-container', menuOpen?'shifted':'']">
         <div :class="['rela-block', 'nav-bar']">
             <div class="rela-block gutter-container inner-nav-container">
@@ -77,31 +91,32 @@
                     <div class="count-down-container">
                       <div class="count-down-box">
                         <div class="count-down">
-                          <h1 id="days">00</h1>
+                          <h1>{{ formatTime(days) }}</h1>
                           <p>Days</p>
                         </div>
                       </div>
                       <div class="count-down-box">
                         <div class="count-down">
-                          <h1 id="hours">00</h1>
+                          <h1>{{ formatTime(hours) }}</h1>
                           <p>Hours</p>
                         </div>
                       </div>
                       <div class="count-down-box">
                         <div class="count-down">
-                          <h1 id="minutes">00</h1>
+                          <h1>{{ formatTime(minutes) }}</h1>
                           <p>Minutes</p>
                         </div>
                       </div>
                       <div class="count-down-box">
                         <div class="count-down">
-                          <h1 id="seconds">00</h1>
+                          <h1>{{ formatTime(seconds) }}</h1>
                           <p>Seconds</p>
                         </div>
                       </div>
                     </div>
                     <p class="hint-message">The day is coming. &#x1F609;</p>
                   </main>
+                  
         </div>
         <div class="rela-block page-section grey product-section">
             <div class="rela-block gutter-container">
@@ -138,7 +153,7 @@
         </div> -->
         <div class="rela-block footer">
             <div class="rela-block gutter-container inner-footer-container">
-                <div class="logo" style="front-size:10px">JAC 2024 @chrisgeek.</div>
+                <div class="logo" style="font-size:20px">JAC 2024 @chrisgeek.</div>
             </div>                
         </div>
     </div>
@@ -184,10 +199,13 @@
         </div>
     </div>
 </div>
-    <script src="js/contador.js"></script>
+
+    <!-- <script src="js/contador.js"></script> -->
 <!-- partial -->
   <script src='https://cdnjs.cloudflare.com/ajax/libs/vue/2.1.10/vue.min.js'></script>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js'></script>
   <script src="js/myscript.js"></script>
+  <!-- <script src="js/sparkle.js"></script> -->
   
 
 </body>
