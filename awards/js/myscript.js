@@ -381,7 +381,7 @@ var app = new Vue({
         updateFilteredProducts: function() {
             this.filteredProducts = [];
             for(var i in this.products) {
-                console.log(i);
+                
                 if(this.products[i].catg === this.currentCatg || this.currentCatg === 'All') { this.filteredProducts.push(this.products[i]) }
             }
             app.updateDisplayedProducts();
