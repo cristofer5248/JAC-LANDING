@@ -512,3 +512,7 @@ ul.ev-user > li:not(.active) > .ev-btn,
 .escondeme{
   display: none;
 }
+
+#personaelecta{
+  display: none;
+}
