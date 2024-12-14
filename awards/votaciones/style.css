@@ -70,7 +70,8 @@ ul.ev-user li {
   position: relative;
   text-align: center;
   transition: all 0.1s ease-in-out;
-  width: 24%;
+  width: 50%;
+  
 }
 ul.ev-user li.active {
   background: #fff;
@@ -82,11 +83,12 @@ ul.ev-user li.active:before {
 .ev-headshot  {
   background: url('http://bl.qa.equisearch.com/Portals/13/headshot_bg_white.png') no-repeat 0 0;
   display: block;
-  height: 170px;
+  height: 300px;
+  /* height: 170px; */
   margin: 0 auto 0.5em;
   position: relative;
   text-align: center;
-  width: 170px;
+  width: 50%;
 }
 li.active .ev-headshot,
 .ev-overlay-content .ev-headshot {
@@ -98,7 +100,7 @@ li.active .ev-headshot,
   z-index: 1;
 }
 ul.ev-user li h3 {
-  font-size: 1.25em;
+  font-size: 2.25em;
   margin: 0;
   text-transform: uppercase;
 }
@@ -300,7 +302,10 @@ ul.ev-social li.gp > div:first-of-type:active {
   margin: 1em 0 0;
 }
 .ev-overlay-content .ev-btn {
-  width: 23%;
+  width: 33%;  
+}
+.ev-btn span{
+font-size: 250%;
 }
 
 ul.ev-user p.results {
@@ -502,4 +507,8 @@ ul.ev-user > li:not(.active) > .ev-btn,
 #wrapper {
   max-width: 980px;
   margin: 0 auto;
+}
+
+.escondeme{
+  display: none;
 }

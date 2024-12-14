@@ -14,19 +14,19 @@ $(document).ready(function() {
     });
     
     var pause = false;
+  // se ve bonito pero arreglar
+    // function fadeNext() {
+    //   $('.rotator-list li').first().fadeOut().appendTo($('.rotator-list'));
+    //   $('.rotator-list li').first().fadeIn();
+    // }
   
-    function fadeNext() {
-      $('.rotator-list li').first().fadeOut().appendTo($('.rotator-list'));
-      $('.rotator-list li').first().fadeIn();
-    }
-  
-    function doRotate() {
-      if(!pause) {
-        fadeNext();
-      }    
-    }
+    // function doRotate() {
+    //   if(!pause) {
+    //     fadeNext();
+    //   }    
+    // }
       
-    var rotate = setInterval(doRotate, 3000);
+    // var rotate = setInterval(doRotate, 3000);
   });
   
   $('ul.entries .body span').click(function() {

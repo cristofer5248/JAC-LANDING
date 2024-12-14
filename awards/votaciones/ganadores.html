@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>Spotify Wrapped Animation 2024</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<link rel="stylesheet" href="../css/ganadores.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<!-- https://www.gabrielfleury.design -->
+<div class="bg">
+  <div class="panel panel1"></div>
+  <div class="panel panel1"></div>
+  <div class="panel panel1"></div>
+  <div class="panel panel1"></div>
+  <div class="panel panel1"></div>
+  <div class="panel panel1"></div>
+  <div class="panel panel1"></div>
+  <div class="panel panel1"></div>
+  <div class="panel panel1"></div>
+  <div class="panel panel1"></div>
+  <div class="panel panel1"></div>
+  <div class="panel panel1"></div>
+  <div class="panel panel2"></div>
+  <div class="panel panel2"></div>
+  <div class="panel panel2"></div>
+  <div class="panel panel2"></div>
+  <div class="panel panel2"></div>
+  <div class="panel panel2"></div>
+  <div class="panel panel2"></div>
+  <div class="panel panel2"></div>
+  <div class="panel panel2"></div>
+  <div class="panel panel2"></div>
+  <div class="panel panel2"></div>
+  <div class="panel panel2"></div>
+</div>
+
+<h1 class="callout" id="ganadores"><br></h1>
+<h2 class="subtitle">Los ganadores son:</h2>
+<!-- partial -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src='https://unpkg.com/gsap@3/dist/gsap.min.js'></script><script  src="../js/ganadores.js"></script>
+  <script src="../js/endpoint.js"></script>
+
+</body>
+<script>
+    $(document).ready(function () {
+    // Obtener el parámetro 'categoria' de la URL
+    const urlParams = new URLSearchParams(window.location.search);
+    const categoria = urlParams.get('categoria');
+    console.log(miapi);
+
+    if (categoria) {
+        // Construir la URL de la API
+        const apiUrl = `${miapi}/api/votos/conteocategoria/${categoria}`;
+
+        // Hacer la petición GET para obtener el JSON
+        $.ajax({
+            url: apiUrl,
+            method: 'GET',
+            success: function (data) {
+                // Verificar que data sea un array y tenga contenido
+                if (Array.isArray(data) && data.length > 0) {
+                    // Obtener el contenedor <h1>
+                    const ganadoresElement = $('#ganadores');
+
+                    // Recorrer los datos y agregarlos al contenido de <h1>
+                    data.forEach(item => {
+                        const nombre = item.nombre;
+                        const cantidad = item.cantidad;
+
+                        // Crear el contenido dinámico
+                        ganadoresElement.append(`${nombre} - ${cantidad} votos<br>`);
+                    });
+                } else {
+                    $('#ganadores').text('No hay datos disponibles.');
+                }
+            },
+            error: function (error) {
+                console.error('Error al realizar la petición:', error);
+                $('#ganadores').text('Error al obtener los datos.');
+            }
+        });
+    } else {
+        $('#ganadores').text('No se encontró la categoría en la URL.');
+    }
+});
+
+</script>
+</html>
