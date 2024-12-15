@@ -223,16 +223,16 @@ var app = new Vue({
                 img: 'https://i.scdn.co/image/fea11053422e15bacd0affe4527d2afc4b9b2d06',
                 date: 'September 18, 2001'
             },
-            // {
-            //     id: 14,
-            //     name: 'Estrella Influencer',
-            //     artist: '',
-            //     desc: 'Demon Days is the second studio album by British virtual band Gorillaz, released on 11 May 2005 in Japan and on 23 May internationally by Parlophone Records and in the United States by Virgin Records. The album features contributions from De La Soul, Neneh Cherry, Martina Topley-Bird, Roots Manuva, MF Doom, Ike Turner, Bootie Brown of the Pharcyde, Shaun Ryder, Dennis Hopper, the London Community Gospel Choir, and a children\'s choir. Frontman Damon Albarn brought in Danger Mouse as producer.<br><br>Demon Days entered the UK charts at number 1 and the US charts at number 6, outperforming the band\'s eponymous 2001 debut album. The album has sold eight million copies worldwide. The album features the singles "Feel Good Inc.", "DARE", "Dirty Harry", "Kids with Guns", and "El Mañana". As with their debut album, the release of Demon Days and its respective live performances were both accompanied by various multimedia. ',
-            //     cost: '',
-            //     catg: 'Catg C',
-            //     img: 'images/NLP4.png',
-            //     date: 'May 11, 2005'
-            // },
+            {
+                id: 14,
+                name: 'Estrella Influencer',
+                artist: '',
+                desc: 'Demon Days is the second studio album by British virtual band Gorillaz, released on 11 May 2005 in Japan and on 23 May internationally by Parlophone Records and in the United States by Virgin Records. The album features contributions from De La Soul, Neneh Cherry, Martina Topley-Bird, Roots Manuva, MF Doom, Ike Turner, Bootie Brown of the Pharcyde, Shaun Ryder, Dennis Hopper, the London Community Gospel Choir, and a children\'s choir. Frontman Damon Albarn brought in Danger Mouse as producer.<br><br>Demon Days entered the UK charts at number 1 and the US charts at number 6, outperforming the band\'s eponymous 2001 debut album. The album has sold eight million copies worldwide. The album features the singles "Feel Good Inc.", "DARE", "Dirty Harry", "Kids with Guns", and "El Mañana". As with their debut album, the release of Demon Days and its respective live performances were both accompanied by various multimedia. ',
+                cost: '',
+                catg: 'Catg C',
+                img: 'images/NLP4.png',
+                date: 'May 11, 2005'
+            },
             {
                 id: 15,
                 name: 'Green EP',
